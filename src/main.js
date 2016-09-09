@@ -14,7 +14,7 @@ function createWindow(name = 'game', width = 960, height = 480, resizable, frame
   
   window.loadURL(`file://${__dirname}/windows/${name}.html`)
   
-  window.webContents.openDevTools()
+  // window.webContents.openDevTools()
   
   window.on('closed', () => {
     window = null
@@ -27,25 +27,25 @@ function createWindow(name = 'game', width = 960, height = 480, resizable, frame
 
 app.on('ready', () => {
   
-  let signup
+  // let signup
   
-  let login = createWindow('login', 600, 400, false, true)
+  // let login = createWindow('login', 600, 400, false, true)
   
-  windows.push(login)
+  // windows.push(login)
   
-  ipcMain.on('signup', () => {
-    
-    signup = createWindow('signup', 400, 520, false, true)
-    windows.push(signup)
-  })
+  // ipcMain.on('signup', () => {
   
-  ipcMain.on('close-signup', () => signup.close())
+  // signup = createWindow('signup', 400, 520, false, true)
+  // windows.push(signup)
+  // })
   
-  ipcMain.on('start-game', () => {
-    
-    login.close()
-    windows.push(createWindow('game', 960, 580, true, true))
-  })
+  // ipcMain.on('close-signup', () => signup.close())
+  
+  // ipcMain.on('start-game', () => {
+  
+  // login.close()
+  windows.push(createWindow('game', 960, 580, true, true))
+  // })
   
 })
 

@@ -3,6 +3,7 @@
  */
 
 import { move } from '../movement'
+import { stats } from '../engine'
 
 
 export function onKeyDown(event) {
@@ -30,7 +31,13 @@ export function onKeyDown(event) {
       move.right()
       break
     
+    case 'f':
+      stats.dom.classList.toggle('invisible')
+      break
+    
     default:
       console.log(event.key)
   }
 }
+
+

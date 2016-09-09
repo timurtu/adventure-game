@@ -1,0 +1,29 @@
+
+.hud {
+  font-family: 'Baloo Tamma', cursive;
+  color: aliceblue;
+  position: fixed;
+  left: .5em;
+  top: .25em;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+
+  .hp-bar-container {
+    position: fixed;
+    width: 20%;
+    height: .75em;
+    border: 2px solid #000;
+    left: 2.2em;
+    top: .5em;
+
+    .hp-bar {
+      //background-color: #4cce75;
+      height: .75em;
+      width: 100%;
+      position: absolute;
+    }
+  }
+}
+
+.invisible {
+  display: none;
+}

@@ -2,7 +2,6 @@
  * Created by timur on 9/8/16.
  */
 
-
 import dom from 'domali'
 import Stats from 'stats.js'
 import { onKeyDown } from './input/keys'
@@ -10,6 +9,7 @@ import { mouseDown, mouseUp, scrollCamera } from './input/mouse'
 import cube from './objects/cube'
 import building from './objects/building'
 import road from './objects/road'
+import hud from './hud'
 
 
 const container = dom.create('div')
@@ -18,7 +18,6 @@ export let scene, camera, renderer, player, stats
 
 let windowHalfX = window.innerWidth / 2
 let windowHalfY = window.innerHeight / 2
-
 
 init()
 animate()
@@ -49,8 +48,9 @@ function init() {
   renderer.setSize(window.innerWidth, window.innerHeight)
   container.appendChild(renderer.domElement)
   
-  stats = new Stats()
-  container.push(stats.dom)
+  // stats = new Stats()
+  // container.push(stats.dom)
+  container.push(hud)
   
   document.addEventListener('keydown', onKeyDown, false)
   document.addEventListener('wheel', scrollCamera, false)
@@ -61,20 +61,20 @@ function init() {
 
 function onWindowResize() {
   
-  windowHalfX = window.innerWidth / 2;
-  windowHalfY = window.innerHeight / 2;
+  windowHalfX = window.innerWidth / 2
+  windowHalfY = window.innerHeight / 2
   
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
+  camera.aspect = window.innerWidth / window.innerHeight
+  camera.updateProjectionMatrix()
   
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(window.innerWidth, window.innerHeight)
 }
 
 function animate() {
   
   requestAnimationFrame(animate)
   
-  stats.begin()
+  // stats.begin()
   renderer.render(scene, camera)
-  stats.end()
+  // stats.end()
 }
