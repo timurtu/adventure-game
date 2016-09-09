@@ -4,7 +4,7 @@
 
 import dom from 'domali'
 import Stats from 'stats.js'
-import { onKeyDown } from './input/keys'
+import { onKeyDown, onKeyUp } from './input/keys'
 import { mouseDown, mouseUp, scrollCamera } from './input/mouse'
 import cube from './objects/cube'
 import building from './objects/building'
@@ -53,6 +53,7 @@ function init() {
   container.push(hud)
   
   document.addEventListener('keydown', onKeyDown, false)
+  document.addEventListener('keyup', onKeyUp, false)
   document.addEventListener('wheel', scrollCamera, false)
   document.addEventListener('mousedown', mouseDown, false)
   document.addEventListener('mouseup', mouseUp, false)

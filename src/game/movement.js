@@ -2,7 +2,7 @@
  * Created by timur on 9/8/16.
  */
 
-import { speed, bound } from './globals'
+import { speed, bound, jumpHeight, jumpSpeed, groundLevel } from './globals'
 import { camera, player } from './engine'
 
 
@@ -34,6 +34,19 @@ export const move = {
       player.position.x -= speed
       camera.position.x -= speed
     }
+  },
+  
+  jump() {
+    
+    for (let i = groundLevel; i < Math.floor(jumpHeight); i++) {
+      setTimeout(() => {
+        player.position.y = i
+      }, i * jumpSpeed)
+    }
+    
+    setTimeout(() => {
+      player.position.y = groundLevel
+    }, 2000)
   }
 }
 

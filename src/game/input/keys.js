@@ -6,6 +6,18 @@ import { move } from '../movement'
 import { stats } from '../engine'
 
 
+export function onKeyUp(event) {
+  
+  event.preventDefault()
+  
+  switch(event.key) {
+    
+    case ' ':
+      move.jump()
+      break
+  }
+}
+
 export function onKeyDown(event) {
   
   event.preventDefault()
@@ -34,9 +46,6 @@ export function onKeyDown(event) {
     case 'f':
       stats.dom.classList.toggle('invisible')
       break
-    
-    default:
-      console.log(event.key)
   }
 }
 
