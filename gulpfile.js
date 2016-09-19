@@ -33,10 +33,4 @@ gulp.task('bundle', ['clean'], () => execAsync(paths.webpack))
 
 gulp.task('build', ['clean', 'transpile', 'copy', 'bundle'])
 
-gulp.task('electron', ['clean', 'build'], () => {
-  execAsync(`${paths.electron} ${paths.mainJs}`)
-    .then(out => log('cyan', out))
-    .catch(e => log('red', e))
-})
-
-gulp.task('watch', ['build', 'electron'], () => gulp.watch(paths.all, ['build', 'electron']))
+gulp.task('watch', () => gulp.watch(paths.all, ['build']))

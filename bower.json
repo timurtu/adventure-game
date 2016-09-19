@@ -1,0 +1,29 @@
+{
+  "name": "adventure-game",
+  "description": "3D adventure MMORPG for mac/windows/linux.",
+  "main": "main.js",
+  "authors": [
+    "Timur Uzel <timurt.uzel@gmail.com> (https://github.com/timurtu)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "adventure",
+    "game",
+    "mac",
+    "windows",
+    "linux",
+    "electron"
+  ],
+  "homepage": "https://github.com/timurtu/adventure-game",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "threex.colliders": "*",
+    "threex.grass": "*"
+  }
+}

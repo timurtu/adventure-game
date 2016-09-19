@@ -7,9 +7,9 @@ import Stats from 'stats.js'
 import { onKeyDown, onKeyUp } from './input/keys'
 import { mouseDown, mouseUp, scrollCamera } from './input/mouse'
 import cube from './objects/cube'
-import building from './objects/building'
+import building from './objects/wall'
 import road from './objects/road'
-import hud from './hud'
+import hud from './hud/hud'
 
 
 const container = dom.create('div')
@@ -48,8 +48,8 @@ function init() {
   renderer.setSize(window.innerWidth, window.innerHeight)
   container.appendChild(renderer.domElement)
   
-  // stats = new Stats()
-  // container.push(stats.dom)
+  stats = new Stats()
+  container.push(stats.dom.set({ class: 'invisible' }))
   container.push(hud)
   
   document.addEventListener('keydown', onKeyDown, false)
@@ -75,7 +75,7 @@ function animate() {
   
   requestAnimationFrame(animate)
   
-  // stats.begin()
+  stats.begin()
   renderer.render(scene, camera)
-  // stats.end()
+  stats.end()
 }

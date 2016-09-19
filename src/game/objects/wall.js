@@ -5,7 +5,7 @@
 import cube from './cube'
 
 
-const building = (scene, pos, cubeSize, size, color, dev) => {
+const wall = (scene, pos, cubeSize, size, color, dev) => {
   
   const numOfCubes = size / cubeSize
   const cubes = []
@@ -21,4 +21,4 @@ const building = (scene, pos, cubeSize, size, color, dev) => {
   return cubes
 }
 
-export default building
+export default wall
