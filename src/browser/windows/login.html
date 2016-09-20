@@ -29,31 +29,22 @@
         <label for="password">Password</label>
         <input id="password" class="form-control" type="password">
 
-        <input type="submit" class="btn btn-outline-primary btn-block" value="Log in">
+        <input type="submit" class="btn btn-outline-primary btn-block"
+               value="Log in">
       </form>
     </div>
 
     <div class="col-sm-3"></div>
   </div>
 
-  <button id="signup-button" class="btn btn-outline-info pull-sm-right">Sign
-    up
+  <button id="signup-button" class="btn btn-outline-info pull-sm-right">
+    Sign up
   </button>
 </div>
 
-<script src="https://www.gstatic.com/firebasejs/3.3.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD84BEBKSSkVjaUrA2KJ-6nAi1nEFkaisQ",
-    authDomain: "adventure-game-2a474.firebaseapp.com",
-    databaseURL: "https://adventure-game-2a474.firebaseio.com",
-    storageBucket: "",
-  };
-  firebase.initializeApp(config);
-</script>
 <script>
   require('../login')
 </script>
+
 </body>
 </html>

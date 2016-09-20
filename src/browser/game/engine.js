@@ -34,10 +34,8 @@ function init() {
   camera.position.z = 1000
   
   cube(scene, { y: -200 }, 200, 'red', false)
-  
   building(scene, { y: -200, x: 3000, z: -5000 }, 200, 5000, 'blue', false)
   building(scene, { y: -200, x: -2000, z: -2000 }, 200, 2000, 'blue', false)
-  
   road(scene, { y: -350, x: 2000, z: -3000 }, 10000, 500, 'yellow', false)
   
   player = cube(scene, { y: -200, z: 200 }, 200, 'green', false)

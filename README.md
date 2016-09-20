@@ -37,7 +37,18 @@
 
 ### Instructions
 
+- start mongo in a separate terminal `mongod`
+
+- `npm install -g gulp` for the gulp cli
+
 - clone this repo
+
 - `cd` into it
-- `npm install`
-- `npm start`
+
+- `npm install` to install deps
+
+- `npm start` to start
+
+- `npm test` to run tests
+
+- `npm run package` to package the app for all available OSs

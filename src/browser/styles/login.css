@@ -3,9 +3,16 @@
 **************/
 
 body {
+
     -webkit-app-region: drag;
 }
 
 form input.form-control {
+
     margin-bottom: 1em;
+}
+
+.container {
+
+    padding: .75em;
 }

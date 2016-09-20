@@ -19,8 +19,7 @@ const paths = {
   js: path.join(path.resolve('src'), '**/*.js'),
   dist: path.resolve('dist'),
   webpack: path.resolve('node_modules/.bin/webpack'),
-  electron: path.resolve('node_modules/.bin/electron'),
-  mainJs: path.resolve('dist/main.js')
+  mainJs: path.resolve('dist/main/main.js')
 }
 
 gulp.task('clean', () => rimrafAsync(paths.dist))
